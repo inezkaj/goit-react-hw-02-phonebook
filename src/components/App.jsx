@@ -24,10 +24,10 @@ export default class App extends Component {
     let contacts = this.state.contacts;
 
     let duplicate = this.state.contacts.find(el => {
-      return el.name.toLowerCase() == contact.name;
+      return el.name.toLowerCase() === contact.name;
     });
 
-    if (duplicate != undefined) {
+    if (duplicate !== undefined) {
       alert(`localhost: 3000 says ${duplicate.name} is already in contacts`);
       return;
     }
@@ -52,7 +52,7 @@ export default class App extends Component {
   }
 
   removeContact(id) {
-    let contacts = this.state.contacts.filter(el => el.id != id);
+    let contacts = this.state.contacts.filter(el => el.id !== id);
 
     this.setState({
       contacts: contacts,
