@@ -22,3 +22,6 @@ export default class Filter extends Component {
     );
   }
 }
+Filter.propTypes = {
+  addingFilterList: PropTypes.func,
+};

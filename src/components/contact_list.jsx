@@ -1,5 +1,6 @@
 import css from './contact.module.css';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class ContactList extends Component {
   removeClick(id) {
@@ -28,3 +29,7 @@ export default class ContactList extends Component {
     );
   }
 }
+ContactList.propTypes = {
+  remove: PropTypes.func,
+  contacts: PropTypes.array,
+};
